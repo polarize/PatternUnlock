@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  PatternUnlock
-//
-//  Created by Issam Bendaas on 03.03.21.
-//
-
 import UIKit
 import Combine
 
@@ -12,18 +5,8 @@ final class UnlockViewController: UIViewController {
 
 	@IBOutlet weak var drawView: PatternLockView!
 
-	@IBOutlet weak var firstKeyLabel: UILabel! {
-		didSet {
-			firstKeyLabel.text = "23322332"
-		}
-	}
-
-	@IBOutlet weak var secondKeyLabel: UILabel! {
-		didSet {
-			secondKeyLabel.text = "32211222"
-		}
-	}
-
+	@IBOutlet weak var firstKeyLabel: UILabel!
+	@IBOutlet weak var secondKeyLabel: UILabel!
 	@IBOutlet weak var enteredKeyLabel: UILabel! {
 		didSet {
 			enteredKeyLabel.text = "---------------"
@@ -36,9 +19,45 @@ final class UnlockViewController: UIViewController {
 		}
 	}
 
+	var viewModel: UnLockPatternViewModel? = UnLockPatternViewModel()
+	var cancellables = Set<AnyCancellable>()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+
+		guard let viewModel = viewModel else {
+			return
+		}
+
+		setup(with: viewModel)
+		bind(to: viewModel)
+
+	}
+
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		viewModel?.didAppears = true
+	}
+
+	private func setup(with viewModel: UnLockPatternViewModel) {
+		enteredKeyLabel.text = viewModel.enteredPattern
+		firstKeyLabel.text = viewModel.unlockKeyA
+
+		secondKeyLabel.text = viewModel.unlockKeyB
+		headerLabel.text = viewModel.headerText
+
+		for dot in viewModel.unlockDots {
+			Static.dotViewConstraints(in: drawView, dotModel: dot)
+		}
+	}
+
+	private func bind(to viewModel: UnLockPatternViewModel) {
+		viewModel
+			.objectWillChange
+			.sink { [weak self] _ in
+				self?.enteredKeyLabel.text = viewModel.enteredPattern
+			}
+			.store(in: &cancellables)
 	}
 
 

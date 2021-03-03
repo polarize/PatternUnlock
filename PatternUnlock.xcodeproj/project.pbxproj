@@ -18,6 +18,9 @@
 		D098C24625EF6826001B42E6 /* PatternLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C24525EF6826001B42E6 /* PatternLockView.swift */; };
 		D098C24B25EF68D5001B42E6 /* UnLockPatternViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C24A25EF68D5001B42E6 /* UnLockPatternViewModel.swift */; };
 		D098C25D25EF6BF1001B42E6 /* UnLockPatternCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C25C25EF6BF1001B42E6 /* UnLockPatternCoordinator.swift */; };
+		D098C26825EF86F1001B42E6 /* UnLockPatternView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C26725EF86F1001B42E6 /* UnLockPatternView+Layout.swift */; };
+		D098C26D25EF8763001B42E6 /* UnlockDotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C26C25EF8763001B42E6 /* UnlockDotModel.swift */; };
+		D098C27225EF87B5001B42E6 /* DotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C27125EF87B5001B42E6 /* DotsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		D098C24525EF6826001B42E6 /* PatternLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternLockView.swift; sourceTree = "<group>"; };
 		D098C24A25EF68D5001B42E6 /* UnLockPatternViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnLockPatternViewModel.swift; sourceTree = "<group>"; };
 		D098C25C25EF6BF1001B42E6 /* UnLockPatternCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnLockPatternCoordinator.swift; sourceTree = "<group>"; };
+		D098C26725EF86F1001B42E6 /* UnLockPatternView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnLockPatternView+Layout.swift"; sourceTree = "<group>"; };
+		D098C26C25EF8763001B42E6 /* UnlockDotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockDotModel.swift; sourceTree = "<group>"; };
+		D098C27125EF87B5001B42E6 /* DotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				D098C20525EF5B1C001B42E6 /* UnlockViewController.swift */,
+				D098C26725EF86F1001B42E6 /* UnLockPatternView+Layout.swift */,
+				D098C27125EF87B5001B42E6 /* DotsView.swift */,
 				D098C24525EF6826001B42E6 /* PatternLockView.swift */,
 				D098C20725EF5B1C001B42E6 /* UnlockViewController.storyboard */,
 			);
@@ -165,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				D098C24A25EF68D5001B42E6 /* UnLockPatternViewModel.swift */,
+				D098C26C25EF8763001B42E6 /* UnlockDotModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -302,7 +311,10 @@
 				D098C24B25EF68D5001B42E6 /* UnLockPatternViewModel.swift in Sources */,
 				D098C25D25EF6BF1001B42E6 /* UnLockPatternCoordinator.swift in Sources */,
 				D098C20625EF5B1C001B42E6 /* UnlockViewController.swift in Sources */,
+				D098C26D25EF8763001B42E6 /* UnlockDotModel.swift in Sources */,
+				D098C27225EF87B5001B42E6 /* DotsView.swift in Sources */,
 				D098C20225EF5B1C001B42E6 /* AppDelegate.swift in Sources */,
+				D098C26825EF86F1001B42E6 /* UnLockPatternView+Layout.swift in Sources */,
 				D098C24625EF6826001B42E6 /* PatternLockView.swift in Sources */,
 				D098C20425EF5B1C001B42E6 /* SceneDelegate.swift in Sources */,
 			);
