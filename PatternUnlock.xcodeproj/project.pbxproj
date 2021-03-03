@@ -28,6 +28,8 @@
 		D0F41BB725F0168700232033 /* GithubUserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BB325F0168700232033 /* GithubUserCoordinator.swift */; };
 		D0F41BB825F0168700232033 /* GithubUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BB425F0168700232033 /* GithubUserViewController.swift */; };
 		D0F41BB925F0168700232033 /* GithubUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BB525F0168700232033 /* GithubUserViewModel.swift */; };
+		D0F41BC125F0193800232033 /* UnlockViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BC025F0193800232033 /* UnlockViewModelTests.swift */; };
+		D0F41BC925F02B1C00232033 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BC825F02B1C00232033 /* Dot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		D0F41BB325F0168700232033 /* GithubUserCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUserCoordinator.swift; sourceTree = "<group>"; };
 		D0F41BB425F0168700232033 /* GithubUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUserViewController.swift; sourceTree = "<group>"; };
 		D0F41BB525F0168700232033 /* GithubUserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUserViewModel.swift; sourceTree = "<group>"; };
+		D0F41BC025F0193800232033 /* UnlockViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockViewModelTests.swift; sourceTree = "<group>"; };
+		D0F41BC825F02B1C00232033 /* Dot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 			children = (
 				D005B0BB25EFFA160075EAA1 /* UnlockCoordinator.swift */,
 				D005B0C325EFFAB00075EAA1 /* UnlockViewModel.swift */,
+				D0F41BC825F02B1C00232033 /* Dot.swift */,
 				D005B0C825EFFAD20075EAA1 /* UnlockViewController.swift */,
 				D005B0CD25EFFB060075EAA1 /* UnlockView.swift */,
 			);
@@ -166,6 +171,7 @@
 		D098C21725EF5B1F001B42E6 /* PatternUnlockTests */ = {
 			isa = PBXGroup;
 			children = (
+				D0F41BC025F0193800232033 /* UnlockViewModelTests.swift */,
 				D098C21825EF5B1F001B42E6 /* PatternUnlockTests.swift */,
 				D098C21A25EF5B1F001B42E6 /* Info.plist */,
 			);
@@ -350,6 +356,7 @@
 				D0F41B9125F0012300232033 /* GithubSearchCoordinator.swift in Sources */,
 				D005B0C425EFFAB00075EAA1 /* UnlockViewModel.swift in Sources */,
 				D0F41B9C25F0015300232033 /* GithubSearchViewModel.swift in Sources */,
+				D0F41BC925F02B1C00232033 /* Dot.swift in Sources */,
 				D098C20225EF5B1C001B42E6 /* AppDelegate.swift in Sources */,
 				D005B0A925EFF5EB0075EAA1 /* ViewController.swift in Sources */,
 				D0F41BB925F0168700232033 /* GithubUserViewModel.swift in Sources */,
@@ -369,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F41BC125F0193800232033 /* UnlockViewModelTests.swift in Sources */,
 				D098C21925EF5B1F001B42E6 /* PatternUnlockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
