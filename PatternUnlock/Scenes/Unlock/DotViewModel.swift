@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 enum UnlockDotIdentifier: Int, CaseIterable {
 	case first = 0
@@ -12,16 +13,6 @@ enum UnlockDotIdentifier: Int, CaseIterable {
 	case ninth
 }
 
-struct DotCoordinate {
-	let dot: Dot
-	let point: Point
-}
-
-struct Dot: Equatable {
-	let identifier: Int
-	let normalImageName = "dot_off.png"
-	let highlightedImageName = "dot_on.png"
-}
 
 struct Point: Equatable {
 	let x: Float
@@ -30,15 +21,19 @@ struct Point: Equatable {
 
 final class DotViewModel: Equatable {
 	static func == (lhs: DotViewModel, rhs: DotViewModel) -> Bool {
-		return lhs.dot == rhs.dot
+		return lhs.identifier == rhs.identifier
 	}
 
-	var dot: Dot
+	let identifier: Int
+	let normalImageName = "dot_off.png"
+	let highlightedImageName = "dot_on.png"
+
 	var isHighlighted: Bool = false
+
 	var point: Point?
 
-	init(dot: Dot) {
-		self.dot = dot
+	init(identifier: Int) {
+		self.identifier = identifier
 	}
 
 }

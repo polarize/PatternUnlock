@@ -23,6 +23,7 @@ protocol UnlockViewModelInput {
 
 protocol UnlockViewModelOutput {
 	var touchedDots: [DotViewModel] { get }
+	var allDots: [DotViewModel] { get }
 }
 
 extension UnlockViewModel: UnlockViewModelIO {
@@ -44,6 +45,9 @@ final class UnlockViewModel: UnlockViewModelOutput, UnlockViewModelInput {
 	let challengeB: Challenge = .userDetails
 
 	var touchedDots = [DotViewModel]()
+	let allDots: [DotViewModel] = UnlockDotIdentifier
+		.allCases
+		.map { DotViewModel(identifier: $0.rawValue) }
 
 	private var maxDistanceAllowed: Float = 0
 

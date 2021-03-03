@@ -2,25 +2,13 @@ import UIKit
 
 final class UnlockView: UIView {
 
-	lazy var challenge1Button: UIButton = {
-		let frame = CGRect(x: 30, y: 200, width: 300, height: 60)
-		let button = UIButton(frame: frame)
-		button.setTitle("Challenge A", for: .normal)
-		button.backgroundColor = .green
-		return button
-	}()
-
-	lazy var challenge2Button: UIButton = {
-		let frame = CGRect(x: 30, y: 300, width: 300, height: 60)
-		let button = UIButton(frame: frame)
-		button.setTitle("Challenge B", for: .normal)
-		button.backgroundColor = .blue
-		return button
-	}()
-
 	var enteredKeyAction: ((String)->Void)?
 
-	init() {
+	var viewModel: UnlockViewModelIO
+	var canvasView: CanvasView?
+
+	init(viewModel: UnlockViewModelIO) {
+		self.viewModel = viewModel
 		super.init(frame: .zero)
 		setup()
 		setupSubviews()
@@ -31,24 +19,33 @@ final class UnlockView: UIView {
 	}
 
 	func setup() {
-		backgroundColor = .red
-
+		backgroundColor = .white
 	}
 
 	func setupSubviews() {
-		addSubview(challenge1Button)
-		addSubview(challenge2Button)
-		challenge1Button.addTarget(self, action: #selector(button1Tapped), for: .touchDown)
-		challenge2Button.addTarget(self, action: #selector(button2Tapped), for: .touchDown)
+		let canvasView = MainView.canvasViewConstraints(in: self, viewModel: viewModel)
+		viewModel.input.patternSize(height: Float(canvasView.frame.height), width: Float(canvasView.frame.width))
+		self.canvasView = canvasView
+		self.canvasView?.setupSubviews(with: viewModel.output.allDots)
 	}
+}
 
-	@objc
-	func button1Tapped() {
-		enteredKeyAction?(Challenge.userSearch.rawValue)
-	}
+extension MainView {
+	static func canvasViewConstraints(in parent: UIView, viewModel: UnlockViewModelIO) -> CanvasView {
+		let canvas = CanvasView(viewModel: viewModel)
+		canvas.backgroundColor = .red
 
-	@objc
-	func button2Tapped() {
-		enteredKeyAction?(Challenge.userDetails.rawValue)
+		parent.addSubview(canvas)
+		canvas.translatesAutoresizingMaskIntoConstraints = false
+		NSLayoutConstraint.activate([
+			canvas.centerXAnchor.constraint(equalTo: parent.centerXAnchor),
+
+			canvas.bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: -100),
+
+			canvas.widthAnchor.constraint(equalTo: parent.widthAnchor, constant: -20),
+			canvas.heightAnchor.constraint(equalTo: parent.widthAnchor, constant: -20)
+		])
+
+		return canvas
 	}
 }
