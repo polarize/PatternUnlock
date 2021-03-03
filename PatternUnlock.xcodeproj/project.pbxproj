@@ -24,6 +24,10 @@
 		D0F41B9C25F0015300232033 /* GithubSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41B9B25F0015300232033 /* GithubSearchViewModel.swift */; };
 		D0F41BA125F0016300232033 /* GithubSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BA025F0016300232033 /* GithubSearchViewController.swift */; };
 		D0F41BA625F0017D00232033 /* GithubSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BA525F0017D00232033 /* GithubSearchView.swift */; };
+		D0F41BB625F0168700232033 /* GithubUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BB225F0168700232033 /* GithubUserView.swift */; };
+		D0F41BB725F0168700232033 /* GithubUserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BB325F0168700232033 /* GithubUserCoordinator.swift */; };
+		D0F41BB825F0168700232033 /* GithubUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BB425F0168700232033 /* GithubUserViewController.swift */; };
+		D0F41BB925F0168700232033 /* GithubUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BB525F0168700232033 /* GithubUserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		D0F41B9B25F0015300232033 /* GithubSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchViewModel.swift; sourceTree = "<group>"; };
 		D0F41BA025F0016300232033 /* GithubSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchViewController.swift; sourceTree = "<group>"; };
 		D0F41BA525F0017D00232033 /* GithubSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchView.swift; sourceTree = "<group>"; };
+		D0F41BB225F0168700232033 /* GithubUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUserView.swift; sourceTree = "<group>"; };
+		D0F41BB325F0168700232033 /* GithubUserCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUserCoordinator.swift; sourceTree = "<group>"; };
+		D0F41BB425F0168700232033 /* GithubUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUserViewController.swift; sourceTree = "<group>"; };
+		D0F41BB525F0168700232033 /* GithubUserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 				D0F41B8925F0003D00232033 /* App */,
 				D005B0D225EFFB540075EAA1 /* Unlock */,
 				D0F41BAA25F0018900232033 /* GithubSearch */,
+				D0F41BB125F0168700232033 /* GithubUserDetaila */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -194,6 +203,18 @@
 			);
 			path = GithubSearch;
 			sourceTree = "<group>";
+		};
+		D0F41BB125F0168700232033 /* GithubUserDetaila */ = {
+			isa = PBXGroup;
+			children = (
+				D0F41BB325F0168700232033 /* GithubUserCoordinator.swift */,
+				D0F41BB225F0168700232033 /* GithubUserView.swift */,
+				D0F41BB425F0168700232033 /* GithubUserViewController.swift */,
+				D0F41BB525F0168700232033 /* GithubUserViewModel.swift */,
+			);
+			name = GithubUserDetaila;
+			path = PatternUnlock/Scenes/GithubUserDetaila;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -331,9 +352,13 @@
 				D0F41B9C25F0015300232033 /* GithubSearchViewModel.swift in Sources */,
 				D098C20225EF5B1C001B42E6 /* AppDelegate.swift in Sources */,
 				D005B0A925EFF5EB0075EAA1 /* ViewController.swift in Sources */,
+				D0F41BB925F0168700232033 /* GithubUserViewModel.swift in Sources */,
 				D005B0AE25EFF6AE0075EAA1 /* MainView.swift in Sources */,
+				D0F41BB725F0168700232033 /* GithubUserCoordinator.swift in Sources */,
 				D005B0BC25EFFA160075EAA1 /* UnlockCoordinator.swift in Sources */,
+				D0F41BB825F0168700232033 /* GithubUserViewController.swift in Sources */,
 				D098C20425EF5B1C001B42E6 /* SceneDelegate.swift in Sources */,
+				D0F41BB625F0168700232033 /* GithubUserView.swift in Sources */,
 				D0F41BA125F0016300232033 /* GithubSearchViewController.swift in Sources */,
 				D0F41BA625F0017D00232033 /* GithubSearchView.swift in Sources */,
 				D005B0CE25EFFB060075EAA1 /* UnlockView.swift in Sources */,

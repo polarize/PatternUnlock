@@ -2,12 +2,19 @@ import UIKit
 
 final class UnlockView: UIView {
 
-	lazy var button: UIButton = {
-
+	lazy var challenge1Button: UIButton = {
 		let frame = CGRect(x: 30, y: 200, width: 300, height: 60)
 		let button = UIButton(frame: frame)
-		button.setTitle("NEXT >>>>>", for: .normal)
+		button.setTitle("Challenge A", for: .normal)
 		button.backgroundColor = .green
+		return button
+	}()
+
+	lazy var challenge2Button: UIButton = {
+		let frame = CGRect(x: 30, y: 300, width: 300, height: 60)
+		let button = UIButton(frame: frame)
+		button.setTitle("Challenge B", for: .normal)
+		button.backgroundColor = .blue
 		return button
 	}()
 
@@ -29,12 +36,19 @@ final class UnlockView: UIView {
 	}
 
 	func setupSubviews() {
-		addSubview(button)
-		button.addTarget(self, action: #selector(buttonTapped), for: .touchDown)
+		addSubview(challenge1Button)
+		addSubview(challenge2Button)
+		challenge1Button.addTarget(self, action: #selector(button1Tapped), for: .touchDown)
+		challenge2Button.addTarget(self, action: #selector(button2Tapped), for: .touchDown)
 	}
 
 	@objc
-	func buttonTapped() {
+	func button1Tapped() {
 		enteredKeyAction?(Challenge.userSearch.rawValue)
+	}
+
+	@objc
+	func button2Tapped() {
+		enteredKeyAction?(Challenge.userDetails.rawValue)
 	}
 }

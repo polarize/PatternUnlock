@@ -36,7 +36,9 @@ final class AppCoordinator: Coordinator {
 	}
 
 	func startUserDetails() {
-
+		let coordinator = GithubUserCoordinator(navigationController: navigationController)
+		coordinator.start()
+		coordinators.append(coordinator)
 	}
 }
 
