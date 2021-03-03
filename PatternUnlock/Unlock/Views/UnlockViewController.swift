@@ -3,7 +3,7 @@ import Combine
 
 final class UnlockViewController: UIViewController {
 
-	@IBOutlet weak var drawView: PatternLockView!
+	private var canvasView: CanvasView?
 
 	@IBOutlet weak var firstKeyLabel: UILabel!
 	@IBOutlet weak var secondKeyLabel: UILabel!
@@ -19,8 +19,8 @@ final class UnlockViewController: UIViewController {
 		}
 	}
 
-	var viewModel: UnLockPatternViewModel? = UnLockPatternViewModel()
-	var cancellables = Set<AnyCancellable>()
+	private var viewModel: UnLockPatternViewModel? = UnLockPatternViewModel()
+	private var cancellables = Set<AnyCancellable>()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -46,18 +46,25 @@ final class UnlockViewController: UIViewController {
 		secondKeyLabel.text = viewModel.unlockKeyB
 		headerLabel.text = viewModel.headerText
 
+		let canvasView = LayoutHelper.canvasViewConstraints(in: view, viewModel: viewModel)
+
 		for dot in viewModel.unlockDots {
-			Static.dotViewConstraints(in: drawView, dotModel: dot)
+			LayoutHelper.dotViewConstraints(in: canvasView, dotModel: dot)
 		}
+
+		self.canvasView = canvasView
+
 	}
 
 	private func bind(to viewModel: UnLockPatternViewModel) {
 		viewModel
 			.objectWillChange
+			.receive(on: DispatchQueue.main)
 			.sink { [weak self] _ in
 				self?.enteredKeyLabel.text = viewModel.enteredPattern
 			}
 			.store(in: &cancellables)
+		
 	}
 
 

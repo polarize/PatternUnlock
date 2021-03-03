@@ -1,6 +1,6 @@
 import UIKit
 
-final class DotsView: UIView {
+final class DotView: UIView {
 
 
 	private var imageView: UIImageView!

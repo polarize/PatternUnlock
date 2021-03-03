@@ -1,11 +1,29 @@
 import UIKit
 
-extension UnlockViewController {
-	typealias Static = UnlockViewController
+class LayoutHelper {
+	typealias Static = LayoutHelper
 
+	static func canvasViewConstraints(in parent: UIView, viewModel: UnLockPatternViewModel) -> CanvasView {
+		let canvas = CanvasView(viewModel: viewModel)
+		canvas.backgroundColor = .white
+
+		parent.addSubview(canvas)
+		canvas.translatesAutoresizingMaskIntoConstraints = false
+		NSLayoutConstraint.activate([
+			canvas.centerXAnchor.constraint(equalTo: parent.centerXAnchor),
+
+			canvas.bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: -100),
+
+			canvas.widthAnchor.constraint(equalTo: parent.widthAnchor, constant: -20),
+			canvas.heightAnchor.constraint(equalTo: parent.widthAnchor, constant: -20)
+		])
+
+		return canvas
+	}
+	
 	static func dotViewConstraints(in parent: UIView, dotModel: UnlockDotModel) {
 
-		let dotView = DotsView(model: dotModel)
+		let dotView = DotView(model: dotModel)
 
 		parent.addSubview(dotView)
 		dotView.translatesAutoresizingMaskIntoConstraints = false

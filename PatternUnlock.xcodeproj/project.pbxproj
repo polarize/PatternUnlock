@@ -15,12 +15,13 @@
 		D098C20E25EF5B1E001B42E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D098C20C25EF5B1E001B42E6 /* LaunchScreen.storyboard */; };
 		D098C21925EF5B1F001B42E6 /* PatternUnlockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C21825EF5B1F001B42E6 /* PatternUnlockTests.swift */; };
 		D098C22425EF5B1F001B42E6 /* PatternUnlockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C22325EF5B1F001B42E6 /* PatternUnlockUITests.swift */; };
-		D098C24625EF6826001B42E6 /* PatternLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C24525EF6826001B42E6 /* PatternLockView.swift */; };
+		D098C24625EF6826001B42E6 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C24525EF6826001B42E6 /* CanvasView.swift */; };
 		D098C24B25EF68D5001B42E6 /* UnLockPatternViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C24A25EF68D5001B42E6 /* UnLockPatternViewModel.swift */; };
 		D098C25D25EF6BF1001B42E6 /* UnLockPatternCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C25C25EF6BF1001B42E6 /* UnLockPatternCoordinator.swift */; };
-		D098C26825EF86F1001B42E6 /* UnLockPatternView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C26725EF86F1001B42E6 /* UnLockPatternView+Layout.swift */; };
+		D098C26825EF86F1001B42E6 /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C26725EF86F1001B42E6 /* LayoutHelper.swift */; };
 		D098C26D25EF8763001B42E6 /* UnlockDotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C26C25EF8763001B42E6 /* UnlockDotModel.swift */; };
-		D098C27225EF87B5001B42E6 /* DotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C27125EF87B5001B42E6 /* DotsView.swift */; };
+		D098C27225EF87B5001B42E6 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C27125EF87B5001B42E6 /* DotView.swift */; };
+		D098C28325EF9565001B42E6 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C28225EF9565001B42E6 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +56,13 @@
 		D098C21F25EF5B1F001B42E6 /* PatternUnlockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PatternUnlockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D098C22325EF5B1F001B42E6 /* PatternUnlockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternUnlockUITests.swift; sourceTree = "<group>"; };
 		D098C22525EF5B1F001B42E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D098C24525EF6826001B42E6 /* PatternLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternLockView.swift; sourceTree = "<group>"; };
+		D098C24525EF6826001B42E6 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		D098C24A25EF68D5001B42E6 /* UnLockPatternViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnLockPatternViewModel.swift; sourceTree = "<group>"; };
 		D098C25C25EF6BF1001B42E6 /* UnLockPatternCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnLockPatternCoordinator.swift; sourceTree = "<group>"; };
-		D098C26725EF86F1001B42E6 /* UnLockPatternView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnLockPatternView+Layout.swift"; sourceTree = "<group>"; };
+		D098C26725EF86F1001B42E6 /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 		D098C26C25EF8763001B42E6 /* UnlockDotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockDotModel.swift; sourceTree = "<group>"; };
-		D098C27125EF87B5001B42E6 /* DotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsView.swift; sourceTree = "<group>"; };
+		D098C27125EF87B5001B42E6 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
+		D098C28225EF9565001B42E6 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				D098C20125EF5B1C001B42E6 /* AppDelegate.swift */,
 				D098C20325EF5B1C001B42E6 /* SceneDelegate.swift */,
+				D098C28225EF9565001B42E6 /* Helpers.swift */,
 				D098C23E25EF66F8001B42E6 /* Unlock */,
 				D098C23425EF65F4001B42E6 /* SupportingFiles */,
 			);
@@ -161,9 +164,9 @@
 			isa = PBXGroup;
 			children = (
 				D098C20525EF5B1C001B42E6 /* UnlockViewController.swift */,
-				D098C26725EF86F1001B42E6 /* UnLockPatternView+Layout.swift */,
-				D098C27125EF87B5001B42E6 /* DotsView.swift */,
-				D098C24525EF6826001B42E6 /* PatternLockView.swift */,
+				D098C26725EF86F1001B42E6 /* LayoutHelper.swift */,
+				D098C27125EF87B5001B42E6 /* DotView.swift */,
+				D098C24525EF6826001B42E6 /* CanvasView.swift */,
 				D098C20725EF5B1C001B42E6 /* UnlockViewController.storyboard */,
 			);
 			path = Views;
@@ -311,11 +314,12 @@
 				D098C24B25EF68D5001B42E6 /* UnLockPatternViewModel.swift in Sources */,
 				D098C25D25EF6BF1001B42E6 /* UnLockPatternCoordinator.swift in Sources */,
 				D098C20625EF5B1C001B42E6 /* UnlockViewController.swift in Sources */,
+				D098C28325EF9565001B42E6 /* Helpers.swift in Sources */,
 				D098C26D25EF8763001B42E6 /* UnlockDotModel.swift in Sources */,
-				D098C27225EF87B5001B42E6 /* DotsView.swift in Sources */,
+				D098C27225EF87B5001B42E6 /* DotView.swift in Sources */,
 				D098C20225EF5B1C001B42E6 /* AppDelegate.swift in Sources */,
-				D098C26825EF86F1001B42E6 /* UnLockPatternView+Layout.swift in Sources */,
-				D098C24625EF6826001B42E6 /* PatternLockView.swift in Sources */,
+				D098C26825EF86F1001B42E6 /* LayoutHelper.swift in Sources */,
+				D098C24625EF6826001B42E6 /* CanvasView.swift in Sources */,
 				D098C20425EF5B1C001B42E6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

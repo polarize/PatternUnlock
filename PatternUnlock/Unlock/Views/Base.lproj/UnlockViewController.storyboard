@@ -50,28 +50,16 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNJ-kq-17g" customClass="PatternLockView" customModule="CollectionView" customModuleProvider="target">
-                                <rect key="frame" x="20" y="216.5" width="374" height="374"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="CNJ-kq-17g" secondAttribute="height" multiplier="1:1" id="a8u-oV-pmF"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DHg-5n-f7M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CNJ-kq-17g" firstAttribute="centerX" secondItem="DHg-5n-f7M" secondAttribute="centerX" id="0hb-vI-oC3"/>
                             <constraint firstItem="DHg-5n-f7M" firstAttribute="trailing" secondItem="nah-t2-o2C" secondAttribute="trailing" constant="20" id="Hx9-9K-rVF"/>
-                            <constraint firstItem="CNJ-kq-17g" firstAttribute="leading" secondItem="DHg-5n-f7M" secondAttribute="leading" constant="20" id="Lhi-bo-1Ou"/>
                             <constraint firstItem="nah-t2-o2C" firstAttribute="top" secondItem="DHg-5n-f7M" secondAttribute="top" constant="40" id="S5u-Z6-ML6"/>
-                            <constraint firstItem="CNJ-kq-17g" firstAttribute="top" secondItem="nah-t2-o2C" secondAttribute="bottom" constant="40" id="gx5-Pw-bAF"/>
-                            <constraint firstItem="DHg-5n-f7M" firstAttribute="trailing" secondItem="CNJ-kq-17g" secondAttribute="trailing" constant="20" id="j0M-Ow-oY9"/>
                             <constraint firstItem="nah-t2-o2C" firstAttribute="leading" secondItem="DHg-5n-f7M" secondAttribute="leading" constant="20" id="zfR-EF-cec"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="drawView" destination="CNJ-kq-17g" id="dmH-5X-rpU"/>
                         <outlet property="enteredKeyLabel" destination="l1p-Az-zHU" id="1PF-Sc-a1C"/>
                         <outlet property="firstKeyLabel" destination="9Sc-a4-ayy" id="KCO-nE-F8Z"/>
                         <outlet property="headerLabel" destination="lum-fA-sDH" id="HIj-3I-7Ny"/>
