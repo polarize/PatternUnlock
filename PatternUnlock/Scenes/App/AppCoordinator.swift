@@ -1,12 +1,19 @@
 import UIKit
 
-final class AppCoordinator {
+protocol Coordinator {
+	var navigationController: UINavigationController { get }
+	func start()
+}
+
+
+final class AppCoordinator: Coordinator {
 
 	let navigationController: UINavigationController
 
-	var unlockCoordinator: UnlockCoordinator?
 	var window: UIWindow
-	
+
+	var coordinators = [Coordinator]()
+
 	init(window: UIWindow) {
 		self.window = window
 		navigationController = UINavigationController()
@@ -14,8 +21,31 @@ final class AppCoordinator {
 	}
 
 	func start() {
-		unlockCoordinator = UnlockCoordinator(navigationController: navigationController)
-		unlockCoordinator?.start()
+		let unlockCoordinator = UnlockCoordinator(navigationController: navigationController)
+		unlockCoordinator.delegate = self
+		unlockCoordinator.start()
 		window.makeKeyAndVisible()
+		coordinators.append(unlockCoordinator)
+	}
+
+	func startUserSearch() {
+		let coordinator = GithubSearchCoordinator(navigationController: navigationController)
+		coordinator.start()
+		coordinators.append(coordinator)
+
+	}
+
+	func startUserDetails() {
+
+	}
+}
+
+extension AppCoordinator: UnlockCoordinatorDelegate {
+
+	func unlockCoordinator(_ coordinator: UnlockCoordinator, didFinishWith challenge: Challenge) {
+		switch challenge {
+			case .userSearch: startUserSearch()
+			case .userDetails: startUserDetails()
+		}
 	}
 }

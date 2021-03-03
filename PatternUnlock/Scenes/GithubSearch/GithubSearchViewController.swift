@@ -1,13 +1,12 @@
 import UIKit
 
-final class UnlockViewController: UIViewController {
+final class GithubSearchViewController: UIViewController {
 
-	
-	let mainView = UnlockView()
+	let mainView = GithubSearchView()
 
-	let viewModel: UnlockViewModel
+	let viewModel: GithubSearchViewModel
 
-	init(with viewModel: UnlockViewModel) {
+	init(with viewModel: GithubSearchViewModel) {
 		self.viewModel = viewModel
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -22,9 +21,7 @@ final class UnlockViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		mainView.enteredKeyAction = {[weak self] key in
-			self?.viewModel.handleEnteredPattern(key)
-		}
 	}
-
+	
 }
+

@@ -20,6 +20,10 @@
 		D098C20E25EF5B1E001B42E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D098C20C25EF5B1E001B42E6 /* LaunchScreen.storyboard */; };
 		D098C21925EF5B1F001B42E6 /* PatternUnlockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C21825EF5B1F001B42E6 /* PatternUnlockTests.swift */; };
 		D098C22425EF5B1F001B42E6 /* PatternUnlockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C22325EF5B1F001B42E6 /* PatternUnlockUITests.swift */; };
+		D0F41B9125F0012300232033 /* GithubSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41B9025F0012300232033 /* GithubSearchCoordinator.swift */; };
+		D0F41B9C25F0015300232033 /* GithubSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41B9B25F0015300232033 /* GithubSearchViewModel.swift */; };
+		D0F41BA125F0016300232033 /* GithubSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BA025F0016300232033 /* GithubSearchViewController.swift */; };
+		D0F41BA625F0017D00232033 /* GithubSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BA525F0017D00232033 /* GithubSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		D098C21F25EF5B1F001B42E6 /* PatternUnlockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PatternUnlockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D098C22325EF5B1F001B42E6 /* PatternUnlockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternUnlockUITests.swift; sourceTree = "<group>"; };
 		D098C22525EF5B1F001B42E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0F41B9025F0012300232033 /* GithubSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchCoordinator.swift; sourceTree = "<group>"; };
+		D0F41B9B25F0015300232033 /* GithubSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchViewModel.swift; sourceTree = "<group>"; };
+		D0F41BA025F0016300232033 /* GithubSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchViewController.swift; sourceTree = "<group>"; };
+		D0F41BA525F0017D00232033 /* GithubSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 			children = (
 				D0F41B8925F0003D00232033 /* App */,
 				D005B0D225EFFB540075EAA1 /* Unlock */,
+				D0F41BAA25F0018900232033 /* GithubSearch */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -173,6 +182,17 @@
 				D005B0AD25EFF6AE0075EAA1 /* MainView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		D0F41BAA25F0018900232033 /* GithubSearch */ = {
+			isa = PBXGroup;
+			children = (
+				D0F41B9025F0012300232033 /* GithubSearchCoordinator.swift */,
+				D0F41B9B25F0015300232033 /* GithubSearchViewModel.swift */,
+				D0F41BA025F0016300232033 /* GithubSearchViewController.swift */,
+				D0F41BA525F0017D00232033 /* GithubSearchView.swift */,
+			);
+			path = GithubSearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,12 +326,16 @@
 			files = (
 				D005B0C925EFFAD20075EAA1 /* UnlockViewController.swift in Sources */,
 				D005B0A425EFF4420075EAA1 /* AppCoordinator.swift in Sources */,
+				D0F41B9125F0012300232033 /* GithubSearchCoordinator.swift in Sources */,
 				D005B0C425EFFAB00075EAA1 /* UnlockViewModel.swift in Sources */,
+				D0F41B9C25F0015300232033 /* GithubSearchViewModel.swift in Sources */,
 				D098C20225EF5B1C001B42E6 /* AppDelegate.swift in Sources */,
 				D005B0A925EFF5EB0075EAA1 /* ViewController.swift in Sources */,
 				D005B0AE25EFF6AE0075EAA1 /* MainView.swift in Sources */,
 				D005B0BC25EFFA160075EAA1 /* UnlockCoordinator.swift in Sources */,
 				D098C20425EF5B1C001B42E6 /* SceneDelegate.swift in Sources */,
+				D0F41BA125F0016300232033 /* GithubSearchViewController.swift in Sources */,
+				D0F41BA625F0017D00232033 /* GithubSearchView.swift in Sources */,
 				D005B0CE25EFFB060075EAA1 /* UnlockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
