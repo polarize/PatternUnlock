@@ -28,7 +28,7 @@ final class DotViewModel: Equatable {
 	let normalImageName = "dot_off.png"
 	let highlightedImageName = "dot_on.png"
 
-	var isHighlighted: Bool = false
+	@Published var isHighlighted: Bool = false
 
 	var point: Point?
 
