@@ -8,16 +8,7 @@ final class CanvasView: UIView {
 	private var cancellables = Set<AnyCancellable>()
 
 	private var trackPoint: CGPoint?
-	private var dotViews = [UIView]()
-
-
-	private var needsRedraw: Bool = false {
-		didSet {
-			if needsRedraw {
-				setNeedsDisplay()
-			}
-		}
-	}
+	private var dotViews = [CGPoint]()
 
 	init(frame: CGRect = .zero, viewModel: UnlockViewModelIO) {
 		self.viewModel = viewModel
@@ -32,6 +23,33 @@ final class CanvasView: UIView {
 		for dot in dots {
 			CanvasView.dotViewConstraints(in: self, dotModel: dot)
 		}
+
+		viewModel.output
+			.touchedDotsPublisher
+			.receive(on: DispatchQueue.main)
+			.map { $0.compactMap { $0.point?.toCGPoint } }
+			.assign(to: \.dotViews, on: self)
+			.store(in: &cancellables)
+
+		viewModel.output
+			.trackPointPublisher
+			.receive(on: DispatchQueue.main)
+			.sink { point in
+				if let point = point {
+					self.drawLineFromLastDot(to: point.toCGPoint)
+				}
+			}
+			.store(in: &cancellables)
+
+		viewModel.output
+			.shouldRedrawPublisher
+			.receive(on: DispatchQueue.main)
+			.sink { draw in
+				if draw {
+					self.setNeedsDisplay()
+				}
+			}
+			.store(in: &cancellables)
 	}
 
 	override func draw(_ rect: CGRect) {
@@ -41,18 +59,20 @@ final class CanvasView: UIView {
 			return
 		}
 
-		guard let trackPoint = trackPoint else { return }
 
-		for (i, dot) in dotViews.enumerated() {
+
+		for (i, point) in dotViews.enumerated() {
 
 			if i == 0 {
-				context.move(to: dot.center)
+				context.move(to: point)
 			} else {
-				context.addLine(to: dot.center)
+				context.addLine(to: point)
 			}
 		}
 
-		context.addLine(to: trackPoint)
+		if let trackPoint = trackPoint {
+			context.addLine(to: trackPoint)
+		}
 
 		context.setStrokeColor(UIColor.black.cgColor)
 		context.setLineWidth(10.0)
@@ -63,47 +83,9 @@ final class CanvasView: UIView {
 		self.trackPoint = nil
 	}
 
-	private func clearDotViews() {
-//		for dotView in dotViews {
-//			guard let imageView = dotView as? DotView else {
-//				return
-//			}
-//			imageView.isHighlighted = false
-//		}
-
-		dotViews.removeAll()
-
-		setNeedsDisplay()
-	}
-
-	private func addDotView(_ view: UIView) {
-
-//		guard dotViews.contains(view) == false else {
-//			return
-//		}
-//
-//		guard dotViews.count < 8 else {
-//			return
-//		}
-//
-//		if let last = dotViews.last, last != view {
-//			let distance = CGPointDistanceSquared(from: view.center, to: last.center)
-//
-//			let surface = frame.height * frame.width
-//
-//			guard distance <= surface/2 else {
-//				return
-//			}
-//		}
-
-//		viewModel.addDot(identifier: view.identifier)
-		dotViews.append(view)
-//		view.isHighlighted = true
-	}
 
 	func drawLineFromLastDot(to point: CGPoint) {
 		self.trackPoint = point
-
 		setNeedsDisplay()
 	}
 }

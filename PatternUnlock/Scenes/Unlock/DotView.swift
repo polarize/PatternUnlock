@@ -20,6 +20,7 @@ final class DotView: UIView {
 
 	let identifier: Int
 	let viewModel: DotViewModel
+	private var cancellables = Set<AnyCancellable>()
 
 	init(frame: CGRect = .zero, viewModel: DotViewModel) {
 		identifier = viewModel.identifier
@@ -41,6 +42,11 @@ final class DotView: UIView {
 		addSubview(imageView)
 		textLabelConstraints()
 		textLabel.text = "\(model.identifier)"
+
+		viewModel.$isHighlighted
+			.receive(on: DispatchQueue.main)
+			.assign(to: \.isHighlighted, on: self)
+			.store(in: &cancellables)
 	}
 
 	private func textLabelConstraints() {
