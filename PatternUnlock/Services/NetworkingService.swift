@@ -1,6 +1,10 @@
 import Foundation
 
-enum NetworkingService {
+protocol Networking {
+	static func requestUsers(userName: String, completion: @escaping (Result<[UserResponse], Error>) -> Void)
+}
+
+enum NetworkingService: Networking {
 	static var baseURL = "https://api.github.com/search/users?q="
 
 	static func requestUsers(userName: String, completion: @escaping (Result<[UserResponse], Error>) -> Void) {

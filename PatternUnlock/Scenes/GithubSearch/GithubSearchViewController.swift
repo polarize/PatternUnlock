@@ -1,4 +1,5 @@
 import UIKit
+import Combine
 
 final class GithubSearchViewController: UIViewController {
 
@@ -10,13 +11,27 @@ final class GithubSearchViewController: UIViewController {
 	var viewModel: GithubSearchViewModel!
 
 	var dataSource: UITableViewDiffableDataSource<Section, UserResponse>?
+	private var cancellables = Set<AnyCancellable>()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupTableView()
-		fetchUsers("eric")
+
+		viewModel.$users
+			.receive(on: DispatchQueue.main)
+			.sink {[weak self] users in
+				self?.populate(with: users)
+			}
+			.store(in: &cancellables)
 	}
 
+
+	@IBAction func searchButtonTapped(_ sender: UIButton) {
+		guard let keyword = searchTextField.text, keyword.count > 2 else {
+			return
+		}
+		viewModel.didTapSearch(keyword)
+	}
 
 	func populate(with users: [UserResponse]) {
 		var snapshot = NSDiffableDataSourceSnapshot<Section, UserResponse>()
@@ -25,19 +40,7 @@ final class GithubSearchViewController: UIViewController {
 		dataSource?.apply(snapshot)
 	}
 
-	func fetchUsers(_ username: String) {
-
-		NetworkingService.requestUsers(userName: username) { [weak self] result in
-			switch result {
-				case .success(let users):
-					self?.populate(with: users)
-
-				case .failure(let error):
-					print(error)
-			}
-
-		}
-	}
+	
 
 	private func setupTableView() {
 
@@ -45,10 +48,8 @@ final class GithubSearchViewController: UIViewController {
 
 			let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
 
-			print(user)
 			cell.textLabel?.text = user.name
 			return cell
-
 		}
 
 	}
@@ -57,7 +58,7 @@ final class GithubSearchViewController: UIViewController {
 extension GithubSearchViewController: UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+		viewModel.didSelectUser(at: indexPath)
 	}
 }
 

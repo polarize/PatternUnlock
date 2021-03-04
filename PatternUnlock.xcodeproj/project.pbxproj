@@ -17,6 +17,7 @@
 		D007978625F0790600E0F183 /* GithubSearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D007978525F0790600E0F183 /* GithubSearchViewController.storyboard */; };
 		D007978B25F0EDA500E0F183 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D007978A25F0EDA500E0F183 /* NetworkingService.swift */; };
 		D00797A425F0FB5400E0F183 /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00797A325F0FB5400E0F183 /* UsersResponse.swift */; };
+		D00797A925F1030700E0F183 /* GithubUserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00797A825F1030700E0F183 /* GithubUserViewController.storyboard */; };
 		D098C20225EF5B1C001B42E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C20125EF5B1C001B42E6 /* AppDelegate.swift */; };
 		D098C20425EF5B1C001B42E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C20325EF5B1C001B42E6 /* SceneDelegate.swift */; };
 		D098C20B25EF5B1E001B42E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D098C20A25EF5B1E001B42E6 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		D007978525F0790600E0F183 /* GithubSearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchViewController.storyboard; sourceTree = "<group>"; };
 		D007978A25F0EDA500E0F183 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		D00797A325F0FB5400E0F183 /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
+		D00797A825F1030700E0F183 /* GithubUserViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubUserViewController.storyboard; sourceTree = "<group>"; };
 		D098C1FE25EF5B1C001B42E6 /* PatternUnlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternUnlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D098C20125EF5B1C001B42E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D098C20325EF5B1C001B42E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				D0F41BB325F0168700232033 /* GithubUserCoordinator.swift */,
 				D0F41BB225F0168700232033 /* GithubUserView.swift */,
 				D0F41BB425F0168700232033 /* GithubUserViewController.swift */,
+				D00797A825F1030700E0F183 /* GithubUserViewController.storyboard */,
 				D0F41BB525F0168700232033 /* GithubUserViewModel.swift */,
 			);
 			name = GithubUserDetaila;
@@ -355,6 +358,7 @@
 				D007978625F0790600E0F183 /* GithubSearchViewController.storyboard in Resources */,
 				D098C20E25EF5B1E001B42E6 /* LaunchScreen.storyboard in Resources */,
 				D098C20B25EF5B1E001B42E6 /* Assets.xcassets in Resources */,
+				D00797A925F1030700E0F183 /* GithubUserViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
