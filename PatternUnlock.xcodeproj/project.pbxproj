@@ -7,14 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D005B0A425EFF4420075EAA1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005B0A325EFF4420075EAA1 /* AppCoordinator.swift */; };
+		D005B0A925EFF5EB0075EAA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005B0A825EFF5EB0075EAA1 /* ViewController.swift */; };
+		D005B0AE25EFF6AE0075EAA1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005B0AD25EFF6AE0075EAA1 /* MainView.swift */; };
+		D005B0BC25EFFA160075EAA1 /* UnlockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005B0BB25EFFA160075EAA1 /* UnlockCoordinator.swift */; };
+		D005B0C425EFFAB00075EAA1 /* UnlockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005B0C325EFFAB00075EAA1 /* UnlockViewModel.swift */; };
+		D005B0C925EFFAD20075EAA1 /* UnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005B0C825EFFAD20075EAA1 /* UnlockViewController.swift */; };
+		D005B0CE25EFFB060075EAA1 /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005B0CD25EFFB060075EAA1 /* UnlockView.swift */; };
+		D007978625F0790600E0F183 /* GithubSearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D007978525F0790600E0F183 /* GithubSearchViewController.storyboard */; };
+		D007978B25F0EDA500E0F183 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D007978A25F0EDA500E0F183 /* NetworkingService.swift */; };
+		D00797A425F0FB5400E0F183 /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00797A325F0FB5400E0F183 /* UsersResponse.swift */; };
+		D00797A925F1030700E0F183 /* GithubUserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00797A825F1030700E0F183 /* GithubUserViewController.storyboard */; };
+		D00797AE25F107DB00E0F183 /* UIImageView+downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00797AD25F107DB00E0F183 /* UIImageView+downloader.swift */; };
 		D098C20225EF5B1C001B42E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C20125EF5B1C001B42E6 /* AppDelegate.swift */; };
 		D098C20425EF5B1C001B42E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C20325EF5B1C001B42E6 /* SceneDelegate.swift */; };
-		D098C20625EF5B1C001B42E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C20525EF5B1C001B42E6 /* ViewController.swift */; };
-		D098C20925EF5B1C001B42E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D098C20725EF5B1C001B42E6 /* Main.storyboard */; };
 		D098C20B25EF5B1E001B42E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D098C20A25EF5B1E001B42E6 /* Assets.xcassets */; };
 		D098C20E25EF5B1E001B42E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D098C20C25EF5B1E001B42E6 /* LaunchScreen.storyboard */; };
 		D098C21925EF5B1F001B42E6 /* PatternUnlockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C21825EF5B1F001B42E6 /* PatternUnlockTests.swift */; };
 		D098C22425EF5B1F001B42E6 /* PatternUnlockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C22325EF5B1F001B42E6 /* PatternUnlockUITests.swift */; };
+		D0F41B9125F0012300232033 /* GithubSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41B9025F0012300232033 /* GithubSearchCoordinator.swift */; };
+		D0F41B9C25F0015300232033 /* GithubSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41B9B25F0015300232033 /* GithubSearchViewModel.swift */; };
+		D0F41BA125F0016300232033 /* GithubSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BA025F0016300232033 /* GithubSearchViewController.swift */; };
+		D0F41BA625F0017D00232033 /* GithubSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BA525F0017D00232033 /* GithubSearchView.swift */; };
+		D0F41BB625F0168700232033 /* GithubUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BB225F0168700232033 /* GithubUserView.swift */; };
+		D0F41BB725F0168700232033 /* GithubUserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BB325F0168700232033 /* GithubUserCoordinator.swift */; };
+		D0F41BB825F0168700232033 /* GithubUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BB425F0168700232033 /* GithubUserViewController.swift */; };
+		D0F41BB925F0168700232033 /* GithubUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BB525F0168700232033 /* GithubUserViewModel.swift */; };
+		D0F41BC125F0193800232033 /* UnlockViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BC025F0193800232033 /* UnlockViewModelTests.swift */; };
+		D0F41BC925F02B1C00232033 /* DotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BC825F02B1C00232033 /* DotViewModel.swift */; };
+		D0F41BCE25F03BC800232033 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BCD25F03BC800232033 /* CanvasView.swift */; };
+		D0F41BD325F03E2300232033 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F41BD225F03E2300232033 /* DotView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +57,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D005B0A325EFF4420075EAA1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D005B0A825EFF5EB0075EAA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D005B0AD25EFF6AE0075EAA1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D005B0BB25EFFA160075EAA1 /* UnlockCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnlockCoordinator.swift; sourceTree = "<group>"; };
+		D005B0C325EFFAB00075EAA1 /* UnlockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockViewModel.swift; sourceTree = "<group>"; };
+		D005B0C825EFFAD20075EAA1 /* UnlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockViewController.swift; sourceTree = "<group>"; };
+		D005B0CD25EFFB060075EAA1 /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
+		D007978525F0790600E0F183 /* GithubSearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchViewController.storyboard; sourceTree = "<group>"; };
+		D007978A25F0EDA500E0F183 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		D00797A325F0FB5400E0F183 /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
+		D00797A825F1030700E0F183 /* GithubUserViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubUserViewController.storyboard; sourceTree = "<group>"; };
+		D00797AD25F107DB00E0F183 /* UIImageView+downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+downloader.swift"; sourceTree = "<group>"; };
 		D098C1FE25EF5B1C001B42E6 /* PatternUnlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternUnlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D098C20125EF5B1C001B42E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D098C20325EF5B1C001B42E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D098C20525EF5B1C001B42E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D098C20825EF5B1C001B42E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D098C20A25EF5B1E001B42E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D098C20D25EF5B1E001B42E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D098C20F25EF5B1E001B42E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +81,18 @@
 		D098C21F25EF5B1F001B42E6 /* PatternUnlockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PatternUnlockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D098C22325EF5B1F001B42E6 /* PatternUnlockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternUnlockUITests.swift; sourceTree = "<group>"; };
 		D098C22525EF5B1F001B42E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0F41B9025F0012300232033 /* GithubSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchCoordinator.swift; sourceTree = "<group>"; };
+		D0F41B9B25F0015300232033 /* GithubSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchViewModel.swift; sourceTree = "<group>"; };
+		D0F41BA025F0016300232033 /* GithubSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchViewController.swift; sourceTree = "<group>"; };
+		D0F41BA525F0017D00232033 /* GithubSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearchView.swift; sourceTree = "<group>"; };
+		D0F41BB225F0168700232033 /* GithubUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUserView.swift; sourceTree = "<group>"; };
+		D0F41BB325F0168700232033 /* GithubUserCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUserCoordinator.swift; sourceTree = "<group>"; };
+		D0F41BB425F0168700232033 /* GithubUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUserViewController.swift; sourceTree = "<group>"; };
+		D0F41BB525F0168700232033 /* GithubUserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUserViewModel.swift; sourceTree = "<group>"; };
+		D0F41BC025F0193800232033 /* UnlockViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockViewModelTests.swift; sourceTree = "<group>"; };
+		D0F41BC825F02B1C00232033 /* DotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotViewModel.swift; sourceTree = "<group>"; };
+		D0F41BCD25F03BC800232033 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		D0F41BD225F03E2300232033 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +120,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D005B09325EFF24F0075EAA1 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				D098C20A25EF5B1E001B42E6 /* Assets.xcassets */,
+				D098C20C25EF5B1E001B42E6 /* LaunchScreen.storyboard */,
+				D098C20F25EF5B1E001B42E6 /* Info.plist */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		D005B0B225EFF89F0075EAA1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D0F41B8925F0003D00232033 /* App */,
+				D005B0D225EFFB540075EAA1 /* Unlock */,
+				D0F41BAA25F0018900232033 /* GithubSearch */,
+				D0F41BB125F0168700232033 /* GithubUserDetaila */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D005B0D225EFFB540075EAA1 /* Unlock */ = {
+			isa = PBXGroup;
+			children = (
+				D005B0BB25EFFA160075EAA1 /* UnlockCoordinator.swift */,
+				D005B0C325EFFAB00075EAA1 /* UnlockViewModel.swift */,
+				D0F41BC825F02B1C00232033 /* DotViewModel.swift */,
+				D005B0C825EFFAD20075EAA1 /* UnlockViewController.swift */,
+				D005B0CD25EFFB060075EAA1 /* UnlockView.swift */,
+				D0F41BCD25F03BC800232033 /* CanvasView.swift */,
+				D0F41BD225F03E2300232033 /* DotView.swift */,
+			);
+			path = Unlock;
+			sourceTree = "<group>";
+		};
+		D007979F25F0FB4200E0F183 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D007978A25F0EDA500E0F183 /* NetworkingService.swift */,
+				D00797AD25F107DB00E0F183 /* UIImageView+downloader.swift */,
+				D00797A325F0FB5400E0F183 /* UsersResponse.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		D098C1F525EF5B1C001B42E6 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +188,9 @@
 		D098C20025EF5B1C001B42E6 /* PatternUnlock */ = {
 			isa = PBXGroup;
 			children = (
-				D098C20125EF5B1C001B42E6 /* AppDelegate.swift */,
-				D098C20325EF5B1C001B42E6 /* SceneDelegate.swift */,
-				D098C20525EF5B1C001B42E6 /* ViewController.swift */,
-				D098C20725EF5B1C001B42E6 /* Main.storyboard */,
-				D098C20A25EF5B1E001B42E6 /* Assets.xcassets */,
-				D098C20C25EF5B1E001B42E6 /* LaunchScreen.storyboard */,
-				D098C20F25EF5B1E001B42E6 /* Info.plist */,
+				D007979F25F0FB4200E0F183 /* Services */,
+				D005B09325EFF24F0075EAA1 /* Ressources */,
+				D005B0B225EFF89F0075EAA1 /* Scenes */,
 			);
 			path = PatternUnlock;
 			sourceTree = "<group>";
@@ -113,6 +198,7 @@
 		D098C21725EF5B1F001B42E6 /* PatternUnlockTests */ = {
 			isa = PBXGroup;
 			children = (
+				D0F41BC025F0193800232033 /* UnlockViewModelTests.swift */,
 				D098C21825EF5B1F001B42E6 /* PatternUnlockTests.swift */,
 				D098C21A25EF5B1F001B42E6 /* Info.plist */,
 			);
@@ -127,6 +213,43 @@
 			);
 			path = PatternUnlockUITests;
 			sourceTree = "<group>";
+		};
+		D0F41B8925F0003D00232033 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D098C20125EF5B1C001B42E6 /* AppDelegate.swift */,
+				D098C20325EF5B1C001B42E6 /* SceneDelegate.swift */,
+				D005B0A325EFF4420075EAA1 /* AppCoordinator.swift */,
+				D005B0A825EFF5EB0075EAA1 /* ViewController.swift */,
+				D005B0AD25EFF6AE0075EAA1 /* MainView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D0F41BAA25F0018900232033 /* GithubSearch */ = {
+			isa = PBXGroup;
+			children = (
+				D0F41B9025F0012300232033 /* GithubSearchCoordinator.swift */,
+				D0F41B9B25F0015300232033 /* GithubSearchViewModel.swift */,
+				D0F41BA025F0016300232033 /* GithubSearchViewController.swift */,
+				D007978525F0790600E0F183 /* GithubSearchViewController.storyboard */,
+				D0F41BA525F0017D00232033 /* GithubSearchView.swift */,
+			);
+			path = GithubSearch;
+			sourceTree = "<group>";
+		};
+		D0F41BB125F0168700232033 /* GithubUserDetaila */ = {
+			isa = PBXGroup;
+			children = (
+				D0F41BB325F0168700232033 /* GithubUserCoordinator.swift */,
+				D0F41BB225F0168700232033 /* GithubUserView.swift */,
+				D0F41BB425F0168700232033 /* GithubUserViewController.swift */,
+				D00797A825F1030700E0F183 /* GithubUserViewController.storyboard */,
+				D0F41BB525F0168700232033 /* GithubUserViewModel.swift */,
+			);
+			name = GithubUserDetaila;
+			path = PatternUnlock/Scenes/GithubUserDetaila;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -144,6 +267,8 @@
 			dependencies = (
 			);
 			name = PatternUnlock;
+			packageProductDependencies = (
+			);
 			productName = PatternUnlock;
 			productReference = D098C1FE25EF5B1C001B42E6 /* PatternUnlock.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +340,8 @@
 				Base,
 			);
 			mainGroup = D098C1F525EF5B1C001B42E6;
+			packageReferences = (
+			);
 			productRefGroup = D098C1FF25EF5B1C001B42E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,9 +358,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D007978625F0790600E0F183 /* GithubSearchViewController.storyboard in Resources */,
 				D098C20E25EF5B1E001B42E6 /* LaunchScreen.storyboard in Resources */,
 				D098C20B25EF5B1E001B42E6 /* Assets.xcassets in Resources */,
-				D098C20925EF5B1C001B42E6 /* Main.storyboard in Resources */,
+				D00797A925F1030700E0F183 /* GithubUserViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +386,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D098C20625EF5B1C001B42E6 /* ViewController.swift in Sources */,
+				D0F41BCE25F03BC800232033 /* CanvasView.swift in Sources */,
+				D005B0C925EFFAD20075EAA1 /* UnlockViewController.swift in Sources */,
+				D005B0A425EFF4420075EAA1 /* AppCoordinator.swift in Sources */,
+				D0F41B9125F0012300232033 /* GithubSearchCoordinator.swift in Sources */,
+				D005B0C425EFFAB00075EAA1 /* UnlockViewModel.swift in Sources */,
+				D0F41B9C25F0015300232033 /* GithubSearchViewModel.swift in Sources */,
+				D0F41BC925F02B1C00232033 /* DotViewModel.swift in Sources */,
 				D098C20225EF5B1C001B42E6 /* AppDelegate.swift in Sources */,
+				D00797AE25F107DB00E0F183 /* UIImageView+downloader.swift in Sources */,
+				D005B0A925EFF5EB0075EAA1 /* ViewController.swift in Sources */,
+				D0F41BB925F0168700232033 /* GithubUserViewModel.swift in Sources */,
+				D005B0AE25EFF6AE0075EAA1 /* MainView.swift in Sources */,
+				D00797A425F0FB5400E0F183 /* UsersResponse.swift in Sources */,
+				D0F41BB725F0168700232033 /* GithubUserCoordinator.swift in Sources */,
+				D007978B25F0EDA500E0F183 /* NetworkingService.swift in Sources */,
+				D005B0BC25EFFA160075EAA1 /* UnlockCoordinator.swift in Sources */,
+				D0F41BB825F0168700232033 /* GithubUserViewController.swift in Sources */,
+				D0F41BD325F03E2300232033 /* DotView.swift in Sources */,
 				D098C20425EF5B1C001B42E6 /* SceneDelegate.swift in Sources */,
+				D0F41BB625F0168700232033 /* GithubUserView.swift in Sources */,
+				D0F41BA125F0016300232033 /* GithubSearchViewController.swift in Sources */,
+				D0F41BA625F0017D00232033 /* GithubSearchView.swift in Sources */,
+				D005B0CE25EFFB060075EAA1 /* UnlockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F41BC125F0193800232033 /* UnlockViewModelTests.swift in Sources */,
 				D098C21925EF5B1F001B42E6 /* PatternUnlockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,14 +445,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D098C20725EF5B1C001B42E6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D098C20825EF5B1C001B42E6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D098C20C25EF5B1E001B42E6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -438,7 +579,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXC5WU7JFC;
-				INFOPLIST_FILE = PatternUnlock/Info.plist;
+				INFOPLIST_FILE = PatternUnlock/Ressources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +598,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXC5WU7JFC;
-				INFOPLIST_FILE = PatternUnlock/Info.plist;
+				INFOPLIST_FILE = PatternUnlock/Ressources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
