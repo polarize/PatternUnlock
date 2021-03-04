@@ -14,6 +14,9 @@
 		D005B0C425EFFAB00075EAA1 /* UnlockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005B0C325EFFAB00075EAA1 /* UnlockViewModel.swift */; };
 		D005B0C925EFFAD20075EAA1 /* UnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005B0C825EFFAD20075EAA1 /* UnlockViewController.swift */; };
 		D005B0CE25EFFB060075EAA1 /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005B0CD25EFFB060075EAA1 /* UnlockView.swift */; };
+		D007978625F0790600E0F183 /* GithubSearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D007978525F0790600E0F183 /* GithubSearchViewController.storyboard */; };
+		D007978B25F0EDA500E0F183 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D007978A25F0EDA500E0F183 /* NetworkingService.swift */; };
+		D00797A425F0FB5400E0F183 /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00797A325F0FB5400E0F183 /* UsersResponse.swift */; };
 		D098C20225EF5B1C001B42E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C20125EF5B1C001B42E6 /* AppDelegate.swift */; };
 		D098C20425EF5B1C001B42E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C20325EF5B1C001B42E6 /* SceneDelegate.swift */; };
 		D098C20B25EF5B1E001B42E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D098C20A25EF5B1E001B42E6 /* Assets.xcassets */; };
@@ -59,6 +62,9 @@
 		D005B0C325EFFAB00075EAA1 /* UnlockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockViewModel.swift; sourceTree = "<group>"; };
 		D005B0C825EFFAD20075EAA1 /* UnlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockViewController.swift; sourceTree = "<group>"; };
 		D005B0CD25EFFB060075EAA1 /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
+		D007978525F0790600E0F183 /* GithubSearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubSearchViewController.storyboard; sourceTree = "<group>"; };
+		D007978A25F0EDA500E0F183 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		D00797A325F0FB5400E0F183 /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
 		D098C1FE25EF5B1C001B42E6 /* PatternUnlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternUnlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D098C20125EF5B1C001B42E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D098C20325EF5B1C001B42E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +151,15 @@
 			path = Unlock;
 			sourceTree = "<group>";
 		};
+		D007979F25F0FB4200E0F183 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D007978A25F0EDA500E0F183 /* NetworkingService.swift */,
+				D00797A325F0FB5400E0F183 /* UsersResponse.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		D098C1F525EF5B1C001B42E6 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +183,7 @@
 		D098C20025EF5B1C001B42E6 /* PatternUnlock */ = {
 			isa = PBXGroup;
 			children = (
+				D007979F25F0FB4200E0F183 /* Services */,
 				D005B09325EFF24F0075EAA1 /* Ressources */,
 				D005B0B225EFF89F0075EAA1 /* Scenes */,
 			);
@@ -211,6 +227,7 @@
 				D0F41B9025F0012300232033 /* GithubSearchCoordinator.swift */,
 				D0F41B9B25F0015300232033 /* GithubSearchViewModel.swift */,
 				D0F41BA025F0016300232033 /* GithubSearchViewController.swift */,
+				D007978525F0790600E0F183 /* GithubSearchViewController.storyboard */,
 				D0F41BA525F0017D00232033 /* GithubSearchView.swift */,
 			);
 			path = GithubSearch;
@@ -244,6 +261,8 @@
 			dependencies = (
 			);
 			name = PatternUnlock;
+			packageProductDependencies = (
+			);
 			productName = PatternUnlock;
 			productReference = D098C1FE25EF5B1C001B42E6 /* PatternUnlock.app */;
 			productType = "com.apple.product-type.application";
@@ -315,6 +334,8 @@
 				Base,
 			);
 			mainGroup = D098C1F525EF5B1C001B42E6;
+			packageReferences = (
+			);
 			productRefGroup = D098C1FF25EF5B1C001B42E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -331,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D007978625F0790600E0F183 /* GithubSearchViewController.storyboard in Resources */,
 				D098C20E25EF5B1E001B42E6 /* LaunchScreen.storyboard in Resources */,
 				D098C20B25EF5B1E001B42E6 /* Assets.xcassets in Resources */,
 			);
@@ -368,7 +390,9 @@
 				D005B0A925EFF5EB0075EAA1 /* ViewController.swift in Sources */,
 				D0F41BB925F0168700232033 /* GithubUserViewModel.swift in Sources */,
 				D005B0AE25EFF6AE0075EAA1 /* MainView.swift in Sources */,
+				D00797A425F0FB5400E0F183 /* UsersResponse.swift in Sources */,
 				D0F41BB725F0168700232033 /* GithubUserCoordinator.swift in Sources */,
+				D007978B25F0EDA500E0F183 /* NetworkingService.swift in Sources */,
 				D005B0BC25EFFA160075EAA1 /* UnlockCoordinator.swift in Sources */,
 				D0F41BB825F0168700232033 /* GithubUserViewController.swift in Sources */,
 				D0F41BD325F03E2300232033 /* DotView.swift in Sources */,

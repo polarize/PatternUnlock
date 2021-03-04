@@ -10,8 +10,10 @@ final class GithubSearchCoordinator: Coordinator {
 
 	func start() {
 		let viewModel = GithubSearchViewModel()
-		let viewController = GithubSearchViewController(with: viewModel)
-		navigationController.pushViewController(viewController, animated: true)
+		let storyboard = UIStoryboard(name: "GithubSearchViewController", bundle: nil)
+		let viewController = storyboard.instantiateInitialViewController() as? GithubSearchViewController//GithubSearchViewController(with: viewModel)
+		viewController?.viewModel = viewModel
+		navigationController.pushViewController(viewController!, animated: true)
 	}
 
 }
