@@ -8,7 +8,14 @@ final class GithubUserViewController: UIViewController {
 		}
 	}
 
-	@IBOutlet weak var avatarImageView: UIImageView!
+	@IBOutlet weak var avatarImageView: UIImageView! {
+		didSet {
+			guard let url = viewModel.avatarURL else {
+				return
+			}
+			avatarImageView.load(url: url)
+		}
+	}
 
 	var viewModel: GithubUserViewModel!
 

@@ -18,6 +18,7 @@
 		D007978B25F0EDA500E0F183 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D007978A25F0EDA500E0F183 /* NetworkingService.swift */; };
 		D00797A425F0FB5400E0F183 /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00797A325F0FB5400E0F183 /* UsersResponse.swift */; };
 		D00797A925F1030700E0F183 /* GithubUserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00797A825F1030700E0F183 /* GithubUserViewController.storyboard */; };
+		D00797AE25F107DB00E0F183 /* UIImageView+downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00797AD25F107DB00E0F183 /* UIImageView+downloader.swift */; };
 		D098C20225EF5B1C001B42E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C20125EF5B1C001B42E6 /* AppDelegate.swift */; };
 		D098C20425EF5B1C001B42E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098C20325EF5B1C001B42E6 /* SceneDelegate.swift */; };
 		D098C20B25EF5B1E001B42E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D098C20A25EF5B1E001B42E6 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		D007978A25F0EDA500E0F183 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		D00797A325F0FB5400E0F183 /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
 		D00797A825F1030700E0F183 /* GithubUserViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GithubUserViewController.storyboard; sourceTree = "<group>"; };
+		D00797AD25F107DB00E0F183 /* UIImageView+downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+downloader.swift"; sourceTree = "<group>"; };
 		D098C1FE25EF5B1C001B42E6 /* PatternUnlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternUnlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D098C20125EF5B1C001B42E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D098C20325EF5B1C001B42E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				D007978A25F0EDA500E0F183 /* NetworkingService.swift */,
+				D00797AD25F107DB00E0F183 /* UIImageView+downloader.swift */,
 				D00797A325F0FB5400E0F183 /* UsersResponse.swift */,
 			);
 			path = Services;
@@ -391,6 +394,7 @@
 				D0F41B9C25F0015300232033 /* GithubSearchViewModel.swift in Sources */,
 				D0F41BC925F02B1C00232033 /* DotViewModel.swift in Sources */,
 				D098C20225EF5B1C001B42E6 /* AppDelegate.swift in Sources */,
+				D00797AE25F107DB00E0F183 /* UIImageView+downloader.swift in Sources */,
 				D005B0A925EFF5EB0075EAA1 /* ViewController.swift in Sources */,
 				D0F41BB925F0168700232033 /* GithubUserViewModel.swift in Sources */,
 				D005B0AE25EFF6AE0075EAA1 /* MainView.swift in Sources */,
